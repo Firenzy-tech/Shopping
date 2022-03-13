@@ -31,8 +31,7 @@ namespace Shopping.Controllers
                 return NotFound();
             }
 
-            Country country = await _context.Countries
-                .FirstOrDefaultAsync(m => m.Id == id);
+            Country country = await _context.Countries.FirstOrDefaultAsync(m => m.Id == id);
             if (country == null)
             {
                 return NotFound();
